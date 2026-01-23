@@ -1,27 +1,25 @@
-package com.hsbc.app;
+package com.hsbc.beans;
 
-import com.hsbc.beans.Person;
-import com.hsbc.beans.Supervisor;
+public class Supervisor extends Person{
+    int experience;
 
-public class PersonDriver {
-    public static void main(String[] args) {
-        Person p1 = new Person(101, "Sanjjaaaiii", "sanj@nothing.com");
-        /*p1.setValues(101, "Sanjai", "msanjai@gmail.com");*/
-        //p1.dispPerson();
-        System.out.println("p1; "+ p1.toString());
-        p1 = new Person(102, "thala", "thalapathy@gmail.com");
-        /*p1.setValues(102, "hola", "olaolaoal@yahoo.com");*/
-        System.out.println("p1; "+ p1.toString());
+    public Supervisor(){
+        super();
+        System.out.println("abcd");
+    }
+    public Supervisor(int id, String name, String email, int experience){
+        super (id, name, email);
+        this.experience=experience;
+    }
+    public int getExperience() {
+        return experience;
+    }
 
-        Person p2 = new Person(107, "abcd", "efgh@g.com");
-        System.out.println("p2; "+ p2.toString());
+    public void setExperience(int experience) {
+        this.experience = experience;
+    }
 
-        Supervisor s1 = new Supervisor(102,"rkpk", "sample@gmail.com", 15);
-        System.out.println("Calling display wuth p1: ");
-        p1.display();
-
-        System.out.println("Calling display s1");
-        s1.display();
+    public void display(){
+        System.out.println("experience: "+experience);
     }
 }
-
