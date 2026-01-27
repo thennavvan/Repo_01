@@ -37,3 +37,14 @@ public class JDBCDemo01 {
         }
     }
 }
+
+--------
+<dependencies>
+        <!-- Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.2.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
