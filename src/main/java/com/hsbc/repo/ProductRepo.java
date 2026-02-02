@@ -1,0 +1,18 @@
+package com.hsbc.repo;
+
+import com.hsbc.entity.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface ProductRepo extends JpaRepository<Product, Integer> {
+
+    List<Product> findByName(String name);
+
+    @Query(value="select prod from Product prod where prod.name like %:name% ")
+    List<Product> findByPartialName(String name);
+
+}
