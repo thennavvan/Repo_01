@@ -1,7 +1,48 @@
 
 # Repo_01
 
+Here are all Java server endpoints available for the frontend:
 
+Wallet
+
+GET /api/wallet
+POST /api/wallet/deposit
+POST /api/wallet/withdraw
+Assets
+
+GET /api/assets
+GET /api/assets/{id}
+GET /api/assets/symbol/{symbol}
+POST /api/assets
+DELETE /api/assets/{id}
+Transactions
+
+GET /api/transactions
+GET /api/transactions/{id}
+GET /api/transactions/asset/{assetId}
+GET /api/transactions/symbol/{symbol}
+POST /api/transactions
+POST /api/transactions/buy
+POST /api/transactions/sell
+DELETE /api/transactions/{id}
+Portfolio
+
+GET /api/portfolio/summary
+Stocks (proxy to Python server)
+
+GET /api/stocks/search
+GET /api/stocks/history/{symbol}
+GET /api/stocks/info/{symbol}
+GET /api/stocks/quote/{symbol}
+
+python endpoint
+/api/stock/search
+/api/stock/multiple
+/api/timeframes
+/api/asset/risk/<symbol>
+/api/asset/news/<symbol>
+/api/asset/insights/<symbol>
+/api/recommendations/daily
 Create a professional, single-page portfolio management web application called "BigBull Portfolio Management" that functions as a complete asset tracking and trading dashboard similar to Groww. The entire application should be contained in a single HTML file with embedded CSS and JavaScript, featuring a modern, eye-catching yet subtle design with smooth animations and transitions.
 The application should have a clean, professional color scheme using blues for primary actions, greens for profits and buy actions, reds for losses and sell actions, and a light gray background with white cards that have subtle shadows. Use a modern sans-serif font like Inter or Roboto throughout the interface. The design must be fully responsive and work seamlessly across desktop, tablet, and mobile devices.
 The main dashboard page should start with a prominent header displaying the portfolio name "BigBull Portfolio Management" in bold, professional typography. Directly below the header, display the total wallet balance in large, clear numbers with a currency symbol. Below the wallet balance, include three primary action buttons arranged horizontally: Assets, Transactions, and Search. These buttons should be styled as prominent call-to-action elements with hover effects.
